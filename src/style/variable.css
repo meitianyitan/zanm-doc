@@ -1,0 +1,24 @@
+$zan-doc-black: #333;
+$zan-doc-blue: #0079f3;
+$zan-doc-text-color: #34495e;
+$zan-doc-text-light-blue: rgba(69, 90, 100, .6);
+$zan-doc-grey: #999;
+$zan-doc-dark-grey: #666;
+$zan-doc-light-grey: #ccc;
+$zan-doc-border-color: #f1f4f8;
+$zan-doc-code-color: #455a64;
+$zan-doc-code-background-color: #f1f4f8;
+$zan-doc-padding: 40px;
+$zan-doc-row-max-width: 1440px;
+
+$zan-doc-nav-width: 240px;
+
+/* header */
+$zan-doc-header-top-height: 60px;
+$zan-doc-header-bottom-height: 50px;
+
+/* simulator */
+$zan-doc-simulator-width: 360px;
+$zan-doc-simulator-small-width: 320px;
+$zan-doc-simulator-height: 620px;
+$zan-doc-simulator-small-height: 560px;
