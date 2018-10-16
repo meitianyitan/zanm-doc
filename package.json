@@ -1,6 +1,6 @@
 {
   "name": "zanm-doc",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "zanm document site template",
   "keywords": [
     "doc",
@@ -26,7 +26,7 @@
     "dev": "webpack-dev-server --config ./build/webpack.dev.conf.js",
     "build": "webpack --hide-modules --progress --config ./build/webpack.prod.conf.js",
     "release": "npm run lint && npm run build && npm publish",
-    "lint": "eslint **/*.{js,vue} *.{js,vue} --fix --ext .js,.vue && stylelint **/*.{vue,css,scss} --fix"
+    "lint": "eslint --fix --ext .js,.vue \"**/*.{js,vue}\" \"*.{js,vue}\" && stylelint \"**/*.{vue,css,scss}\" --fix"
   },
   "husky": {
     "hooks": {
@@ -56,7 +56,6 @@
     "@commitlint/cli": "^7.2.0",
     "@commitlint/config-conventional": "^7.1.2",
     "add": "^2.0.6",
-    "autoprefixer": "^9.1.5",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",

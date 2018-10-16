@@ -594,7 +594,7 @@ autoprefixer@^7.1.1:
     postcss "^6.0.17"
     postcss-value-parser "^3.2.3"
 
-autoprefixer@^9.0.0, autoprefixer@^9.1.5:
+autoprefixer@^9.0.0:
   version "9.1.5"
   resolved "http://registry.npm.taobao.org/autoprefixer/download/autoprefixer-9.1.5.tgz#8675fd8d1c0d43069f3b19a2c316f3524e4f6671"
   dependencies:
