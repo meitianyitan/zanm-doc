@@ -1,17 +1,17 @@
 <template>
-  <div class="van-doc-nav" :style="style">
-    <div class="van-doc-nav__item" v-for="(item, index) in navConfig" :key="index">
-      <van-doc-nav-link :item="item" :base="base" />
+  <div class="zan-doc-nav" :style="style">
+    <div class="zan-doc-nav__item" v-for="(item, index) in navConfig" :key="index">
+      <zan-doc-nav-link :item="item" :base="base" />
       <div v-if="item.children">
         <div class="nav-item" v-for="(navItem, index) in item.children" :key="index">
-          <van-doc-nav-link :item="navItem" :base="base" />
+          <zan-doc-nav-link :item="navItem" :base="base" />
         </div>
       </div>
       <div v-if="item.groups" v-for="(group, index) in item.groups" :key="index">
-        <div class="van-doc-nav__group-title">{{ group.groupName }}</div>
+        <div class="zan-doc-nav__group-title">{{ group.groupName }}</div>
         <div>
-          <div :key="index" class="van-doc-nav__subitem" v-for="(navItem, index) in group.list" v-if="!navItem.disabled">
-            <van-doc-nav-link :item="navItem" :base="base" />
+          <div :key="index" class="zan-doc-nav__subitem" v-for="(navItem, index) in group.list" v-if="!navItem.disabled">
+            <zan-doc-nav-link :item="navItem" :base="base" />
           </div>
         </div>
       </div>
