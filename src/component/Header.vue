@@ -52,7 +52,7 @@ export default {
 
   methods: {
     onSwitchLang(lang) {
-      this.$router.push(this.$router.path.replace(lang.from, lang.to));
+      this.$router.push(this.$route.path.replace(lang.from, lang.to));
     }
   }
 };
