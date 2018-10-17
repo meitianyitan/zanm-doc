@@ -3,8 +3,6 @@ module.exports = {
     'postcss-import': {},
     'precss': {},
     'postcss-cssnext': {},
-    'postcss-calc': {},
-    'autoprefixer': {
-    }
+    'postcss-calc': {}
   }
 };
