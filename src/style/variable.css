@@ -1,24 +1,24 @@
-$zan-doc-black: #333;
-$zan-doc-blue: #0079f3;
-$zan-doc-text-color: #34495e;
-$zan-doc-text-light-blue: rgba(69, 90, 100, .6);
-$zan-doc-grey: #999;
-$zan-doc-dark-grey: #666;
-$zan-doc-light-grey: #ccc;
-$zan-doc-border-color: #f1f4f8;
-$zan-doc-code-color: #455a64;
-$zan-doc-code-background-color: #f1f4f8;
-$zan-doc-padding: 40px;
-$zan-doc-row-max-width: 1440px;
+$zvm-doc-black: #333;
+$zvm-doc-blue: #0079f3;
+$zvm-doc-text-color: #34495e;
+$zvm-doc-text-light-blue: rgba(69, 90, 100, .6);
+$zvm-doc-grey: #999;
+$zvm-doc-dark-grey: #666;
+$zvm-doc-light-grey: #ccc;
+$zvm-doc-border-color: #f1f4f8;
+$zvm-doc-code-color: #455a64;
+$zvm-doc-code-background-color: #f1f4f8;
+$zvm-doc-padding: 40px;
+$zvm-doc-row-max-width: 1440px;
 
-$zan-doc-nav-width: 240px;
+$zvm-doc-nav-width: 240px;
 
 /* header */
-$zan-doc-header-top-height: 60px;
-$zan-doc-header-bottom-height: 50px;
+$zvm-doc-header-top-height: 60px;
+$zvm-doc-header-bottom-height: 50px;
 
 /* simulator */
-$zan-doc-simulator-width: 360px;
-$zan-doc-simulator-small-width: 320px;
-$zan-doc-simulator-height: 620px;
-$zan-doc-simulator-small-height: 560px;
+$zvm-doc-simulator-width: 360px;
+$zvm-doc-simulator-small-width: 320px;
+$zvm-doc-simulator-height: 620px;
+$zvm-doc-simulator-small-height: 560px;

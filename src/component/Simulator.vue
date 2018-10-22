@@ -1,8 +1,8 @@
 <template>
-  <div :class="['zan-doc-simulator', { 'zan-doc-simulator-fixed': isFixed }]">
-    <div class="zan-doc-simulator__nav">
-      <div class="zan-doc-simulator__url">{{ iframeHostName }}</div>
-      <div class="zan-doc-simulator__reload" @click="reloadIframe" />
+  <div :class="['zvm-doc-simulator', { 'zvm-doc-simulator-fixed': isFixed }]">
+    <div class="zvm-doc-simulator__nav">
+      <div class="zvm-doc-simulator__url">{{ iframeHostName }}</div>
+      <div class="zvm-doc-simulator__reload" @click="reloadIframe" />
     </div>
     <iframe ref="iframe" :src="srcWithTimestamp" :style="simulatorStyle" frameborder="0" />
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'zan-doc-simulator',
+  name: 'zvm-doc-simulator',
 
   props: {
     src: String
@@ -92,22 +92,22 @@ export default {
 <style lang="postcss">
 @import '../style/variable';
 
-.zan-doc-simulator {
+.zvm-doc-simulator {
   z-index: 1;
   overflow: hidden;
   position: absolute;
   border-radius: 6px;
   background: #fafafa;
   box-sizing: border-box;
-  right: $zan-doc-padding;
-  width: $zan-doc-simulator-width;
-  min-width: $zan-doc-simulator-width;
-  top: calc($zan-doc-padding + $zan-doc-header-top-height);
+  right: $zvm-doc-padding;
+  width: $zvm-doc-simulator-width;
+  min-width: $zvm-doc-simulator-width;
+  top: calc($zvm-doc-padding + $zvm-doc-header-top-height);
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 4px, rgba(0, 0, 0, 0.2) 0 1px 2px;
 
   @media (max-width: 1300px) {
-    width: $zan-doc-simulator-small-width;
-    min-width: $zan-doc-simulator-small-width;
+    width: $zvm-doc-simulator-small-width;
+    min-width: $zvm-doc-simulator-small-width;
   }
 
   @media (max-width: 1100px) {
@@ -115,14 +115,14 @@ export default {
     right: auto;
   }
 
-  @media (min-width: $zan-doc-row-max-width) {
+  @media (min-width: $zvm-doc-row-max-width) {
     right: 50%;
-    margin-right: calc(-$zan-doc-row-max-width/2 + 40px);
+    margin-right: calc(-$zvm-doc-row-max-width/2 + 40px);
   }
 
   &-fixed {
     position: fixed;
-    top: $zan-doc-padding;
+    top: $zvm-doc-padding;
   }
 
   iframe {

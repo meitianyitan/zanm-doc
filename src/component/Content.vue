@@ -1,12 +1,12 @@
 <template>
-  <div :class="['zan-doc-content', `zan-doc-content--${currentPage}`]">
+  <div :class="['zvm-doc-content', `zvm-doc-content--${currentPage}`]">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'zan-doc-content',
+  name: 'zvm-doc-content',
 
   computed: {
     currentPage() {
@@ -23,17 +23,17 @@ export default {
 <style lang="postcss">
 @import '../style/variable';
 
-.zan-doc-content {
+.zvm-doc-content {
   flex: 1;
   position: relative;
   padding: 0 0 75px;
 
   a {
-    color: $zan-doc-blue;
+    color: $zvm-doc-blue;
   }
 
   section {
-    padding: 10px $zan-doc-padding;
+    padding: 10px $zvm-doc-padding;
     overflow: hidden;
 
     > h1,
@@ -45,7 +45,7 @@ export default {
       line-height: 1.5;
       font-weight: normal;
       margin: 20px 0 10px;
-      color: $zan-doc-black;
+      color: $zvm-doc-black;
     }
 
     > h1 {
@@ -77,25 +77,25 @@ export default {
 
     > h6 {
       font-size: 14px;
-      color: $zan-doc-dark-grey;
+      color: $zvm-doc-dark-grey;
     }
 
     > p {
       margin: 15px 0;
       font-size: 14px;
       line-height: 26px;
-      color: $zan-doc-text-color;
+      color: $zvm-doc-text-color;
     }
 
     > ul,
     > ol {
       padding: 15px 0;
-      background-color: $zan-doc-code-background-color;
+      background-color: $zvm-doc-code-background-color;
     }
 
     > ul li,
     > ol li {
-      color: $zan-doc-text-color;
+      color: $zvm-doc-text-color;
       font-size: 14px;
       line-height: 22px;
       margin: 5px 0 5px 20px;
@@ -112,7 +112,7 @@ export default {
         margin-top: 8px;
         border-radius: 50%;
         box-sizing: border-box;
-        border: 1px solid $zan-doc-dark-grey;
+        border: 1px solid $zvm-doc-dark-grey;
       }
 
       li {
@@ -151,13 +151,13 @@ export default {
     margin-bottom: 45px;
     background-color: #fff;
     border-collapse: collapse;
-    color: $zan-doc-text-color;
+    color: $zvm-doc-text-color;
 
     th {
       padding: 8px 10px;
       text-align: left;
       font-weight: normal;
-      background-color: $zan-doc-code-background-color;
+      background-color: $zvm-doc-code-background-color;
 
       &:first-child {
         padding-left: 10px;
@@ -166,7 +166,7 @@ export default {
 
     td {
       padding: 8px;
-      border-bottom: 1px solid $zan-doc-code-background-color;
+      border-bottom: 1px solid $zvm-doc-code-background-color;
     }
 
     code {

@@ -1,7 +1,7 @@
 <template>
-  <div class="zan-doc-footer">
+  <div class="zvm-doc-footer">
     <ul>
-      <li class="zan-doc-footer__item" v-for="(value, key) in config.nav" :key="key">
+      <li class="zvm-doc-footer__item" v-for="(value, key) in config.nav" :key="key">
         <a :href="value" target="_blank">{{ key }}</a>
       </li>
     </ul>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'zan-doc-footer',
+  name: 'zvm-doc-footer',
 
   props: {
     config: Object
@@ -27,7 +27,7 @@ export default {
 <style lang="postcss">
 @import '../style/variable';
 
-.zan-doc-footer {
+.zvm-doc-footer {
   position: relative;
   background-color: #061a2a;
 

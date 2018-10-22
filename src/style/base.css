@@ -36,11 +36,11 @@ a {
   text-decoration: none;
 }
 
-.zan-doc-row {
+.zvm-doc-row {
   width: 100%;
 
-  @media (min-width: $zan-doc-row-max-width) {
-    width: $zan-doc-row-max-width;
+  @media (min-width: $zvm-doc-row-max-width) {
+    width: $zvm-doc-row-max-width;
     margin: 0 auto;
   }
 }

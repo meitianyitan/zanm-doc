@@ -1,17 +1,17 @@
 <template>
-  <div class="zan-doc-nav" :style="style">
-    <div class="zan-doc-nav__item" v-for="(item, index) in navConfig" :key="index">
-      <zan-doc-nav-link :item="item" :base="base" />
+  <div class="zvm-doc-nav" :style="style">
+    <div class="zvm-doc-nav__item" v-for="(item, index) in navConfig" :key="index">
+      <zvm-doc-nav-link :item="item" :base="base" />
       <div v-if="item.children">
         <div class="nav-item" v-for="(navItem, index) in item.children" :key="index">
-          <zan-doc-nav-link :item="navItem" :base="base" />
+          <zvm-doc-nav-link :item="navItem" :base="base" />
         </div>
       </div>
       <div v-if="item.groups" v-for="(group, index) in item.groups" :key="index">
-        <div class="zan-doc-nav__group-title">{{ group.groupName }}</div>
+        <div class="zvm-doc-nav__group-title">{{ group.groupName }}</div>
         <div>
-          <div :key="index" class="zan-doc-nav__subitem" v-for="(navItem, index) in group.list" v-if="!navItem.disabled">
-            <zan-doc-nav-link :item="navItem" :base="base" />
+          <div :key="index" class="zvm-doc-nav__subitem" v-for="(navItem, index) in group.list" v-if="!navItem.disabled">
+            <zvm-doc-nav-link :item="navItem" :base="base" />
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@
 import NavLink from './NavLink';
 
 export default {
-  name: 'zan-doc-nav',
+  name: 'zvm-doc-nav',
 
   components: {
     [NavLink.name]: NavLink
@@ -70,7 +70,7 @@ export default {
 <style lang="postcss">
 @import '../style/variable';
 
-.zan-doc-nav {
+.zvm-doc-nav {
   left: 0;
   top: 60px;
   bottom: 0;
@@ -78,18 +78,18 @@ export default {
   position: fixed;
   overflow-y: scroll;
   padding: 25px 0 75px;
-  min-width: $zan-doc-nav-width;
-  max-width: $zan-doc-nav-width;
-  border-right: 1px solid $zan-doc-border-color;
+  min-width: $zvm-doc-nav-width;
+  max-width: $zvm-doc-nav-width;
+  border-right: 1px solid $zvm-doc-border-color;
 
   @media (max-width: 1300px) {
     min-width: 220px;
     max-width: 220px;
   }
 
-  @media (min-width: $zan-doc-row-max-width) {
+  @media (min-width: $zvm-doc-row-max-width) {
     left: 50%;
-    margin-left: calc(-$zan-doc-row-max-width/2);
+    margin-left: calc(-$zvm-doc-row-max-width/2);
   }
 
   &::-webkit-scrollbar {
@@ -114,12 +114,12 @@ export default {
       display: block;
       color: #455a64;
       font-size: 16px;
-      padding: 10px calc($zan-doc-padding/2) 10px $zan-doc-padding;
+      padding: 10px calc($zvm-doc-padding/2) 10px $zvm-doc-padding;
       line-height: 24px;
       transition: all .3s;
 
       &.active {
-        color: $zan-doc-blue;
+        color: $zvm-doc-blue;
       }
     }
   }
@@ -135,7 +135,7 @@ export default {
       font-size: 14px;
 
       &:hover {
-        color: $zan-doc-blue;
+        color: $zvm-doc-blue;
       }
     }
 
@@ -148,8 +148,8 @@ export default {
   &__group-title {
     font-size: 12px;
     line-height: 40px;
-    padding-left: $zan-doc-padding;
-    color: $zan-doc-text-light-blue;
+    padding-left: $zvm-doc-padding;
+    color: $zvm-doc-text-light-blue;
   }
 
   @media (max-width: 1300px) {

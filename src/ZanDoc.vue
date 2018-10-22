@@ -1,15 +1,15 @@
 <template>
-  <div class="zan-doc">
-    <zan-doc-header :config="config.header" :active="active" />
-    <zan-doc-nav :nav-config="config.nav" :base="base" />
-    <zan-doc-container :has-simulator="!!(simulator || simulators.length)">
-      <zan-doc-content>
+  <div class="zvm-doc">
+    <zvm-doc-header :config="config.header" :active="active" />
+    <zvm-doc-nav :nav-config="config.nav" :base="base" />
+    <zvm-doc-container :has-simulator="!!(simulator || simulators.length)">
+      <zvm-doc-content>
         <slot />
-        <zan-doc-footer-nav :nav-config="config.nav" :base="base" />
-      </zan-doc-content>
-    </zan-doc-container>
-    <zan-doc-simulator v-if="simulator" :src="simulator" />
-    <zan-doc-simulator
+        <zvm-doc-footer-nav :nav-config="config.nav" :base="base" />
+      </zvm-doc-content>
+    </zvm-doc-container>
+    <zvm-doc-simulator v-if="simulator" :src="simulator" />
+    <zvm-doc-simulator
       v-for="(url, index) in simulators"
       v-show="index === currentSimulator"
       :src="url"
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'zan-doc',
+  name: 'zvm-doc',
 
   props: {
     active: String,

@@ -1,19 +1,20 @@
 <template>
-  <div class="zan-doc-header">
-    <div class="zan-doc-row">
-      <div class="zan-doc-header__top">
-        <a class="zan-doc-header__logo" :href="config.logo.href">
+  <div class="zvm-doc-header">
+    <div class="zvm-doc-row">
+      <div class="zvm-doc-header__top">
+        <a class="zvm-doc-header__logo" :href="config.logo.href">
           <img :src="config.logo.image" >
           <span>{{ config.logo.title }}</span>
-          <span v-if="config.logo.version" class="zan-doc-header__version">v{{ config.logo.version }}</span>
+          <span v-if="config.logo.version" class="zvm-doc-header__version">v{{ config.logo.version }}</span>
         </a>
-        <ul class="zan-doc-header__top-nav">
+        <ul class="zvm-doc-header__top-nav">
           <li
             v-for="(value, key) in config.nav"
-            class="zan-doc-header__top-nav-item"
+            :key="key"
+            class="zvm-doc-header__top-nav-item"
             :class="{ active: key === active }">
             <a
-              class="zan-doc-header__top-nav-title"
+              class="zvm-doc-header__top-nav-title"
               :href="typeof value === 'string' ? value : 'javascript:;'"
               :target="key === 'github' ? '_blank' : ''"
               :class="{
@@ -31,7 +32,7 @@
               >
                 <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
               </svg>
-              <span v-else-if="key === 'lang'" class="zan-doc-header__top-nav-lang" @click="onSwitchLang(value)">{{ value.text }}</span>
+              <span v-else-if="key === 'lang'" class="zvm-doc-header__top-nav-lang" @click="onSwitchLang(value)">{{ value.text }}</span>
               <span v-else>{{ key }}</span>
             </a>
           </li>
@@ -43,7 +44,7 @@
 
 <script>
 export default {
-  name: 'zan-doc-header',
+  name: 'zvm-doc-header',
 
   props: {
     config: Object,
@@ -61,18 +62,18 @@ export default {
 <style lang="postcss">
 @import '../style/variable';
 
-.zan-doc-header {
+.zvm-doc-header {
   width: 100%;
   user-select: none;
-  border-bottom: 1px solid $zan-doc-border-color;
+  border-bottom: 1px solid $zvm-doc-border-color;
 
   &__top {
     display: flex;
     align-items: center;
     background-color: #fff;
-    padding: 0 $zan-doc-padding;
-    height: $zan-doc-header-top-height;
-    line-height: $zan-doc-header-top-height;
+    padding: 0 $zvm-doc-padding;
+    height: $zvm-doc-header-top-height;
+    line-height: $zvm-doc-header-top-height;
 
     &-nav {
       flex: 1;
@@ -91,13 +92,13 @@ export default {
         display: block;
         border-radius: 3px;
         text-align: center;
-        color: $zan-doc-code-color;
+        color: $zvm-doc-code-color;
         border: 1px solid currentColor;
         font-family: 'Helvetica Neue', Arial, sans-serif;
         transition: 0.3s ease-in-out;
 
         &:hover {
-          color: $zan-doc-blue;
+          color: $zvm-doc-blue;
         }
       }
 
@@ -110,34 +111,34 @@ export default {
         font-size: 15px;
 
         svg {
-          fill: $zan-doc-code-color;
+          fill: $zvm-doc-code-color;
           display: block;
           vertical-align: middle;
           transition: 0.3s ease-in-out;
 
           &:hover {
-            fill: $zan-doc-blue;
+            fill: $zvm-doc-blue;
           }
         }
 
         &.link {
-          color: $zan-doc-text-color;
+          color: $zvm-doc-text-color;
           border-bottom: 1px solid transparent;
           transition: 0.3s ease-in-out;
 
           &:hover,
           &:active {
-            color: $zan-doc-blue;
+            color: $zvm-doc-blue;
             border-bottom-color: #19b5fe;
           }
         }
       }
 
-      .zan-doc-header__arrow:hover {
-        color: $zan-doc-text-color;
+      .zvm-doc-header__arrow:hover {
+        color: $zvm-doc-text-color;
       }
 
-      .zan-doc-header__arrow::after {
+      .zvm-doc-header__arrow::after {
         content: '';
         display: inline-block;
         vertical-align: middle;
@@ -170,11 +171,11 @@ export default {
 
     span {
       font-size: 22px;
-      color: $zan-doc-black;
+      color: $zvm-doc-black;
       font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
     }
 
-    .zan-doc-header__version {
+    .zvm-doc-header__version {
       font-size: 90%;
       padding-top: 7px;
       opacity: 0.7;
@@ -184,8 +185,8 @@ export default {
   }
 
   &__bottom {
-    height: $zan-doc-header-bottom-height;
-    line-height: $zan-doc-header-bottom-height;
+    height: $zvm-doc-header-bottom-height;
+    line-height: $zvm-doc-header-bottom-height;
 
     &-nav {
       text-align: center;
