@@ -1,25 +1,25 @@
 <template>
-  <div class="zan-doc-footer-nav">
+  <div class="zvm-doc-footer-nav">
     <div
       v-if="leftNav"
-      class="zan-doc-footer-nav__link zan-doc-footer-nav__left"
+      class="zvm-doc-footer-nav__link zvm-doc-footer-nav__left"
       @click="handleNavClick('prev')">
-      <div class="zan-doc-footer-nav__arrow-left" />
+      <div class="zvm-doc-footer-nav__arrow-left" />
       <span>{{ leftNav.title }}</span>
     </div>
     <div
       v-if="rightNav"
-      class="zan-doc-footer-nav__link zan-doc-footer-nav__right"
+      class="zvm-doc-footer-nav__link zvm-doc-footer-nav__right"
       @click="handleNavClick('next')">
       <span>{{ rightNav.title }}</span>
-      <div class="zan-doc-footer-nav__arrow-right" />
+      <div class="zvm-doc-footer-nav__arrow-right" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'zan-doc-footer-nav',
+  name: 'zvm-doc-footer-nav',
 
   props: {
     base: String,
@@ -106,7 +106,7 @@ export default {
 <style lang="postcss">
 @import '../style/variable';
 
-.zan-doc-footer-nav {
+.zvm-doc-footer-nav {
   left: 0;
   right: 0;
   bottom: 0;
@@ -120,15 +120,15 @@ export default {
     line-height: 1.5;
     cursor: pointer;
     opacity: .7;
-    color: $zan-doc-code-color;
+    color: $zvm-doc-code-color;
     transition: .3s;
 
     &:hover {
       opacity: 1;
-      color: $zan-doc-blue;
+      color: $zvm-doc-blue;
     }
 
-    .zan-icon {
+    .zvm-icon {
       font-size: 12px;
       line-height: 16px;
     }

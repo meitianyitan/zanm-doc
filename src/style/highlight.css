@@ -11,9 +11,9 @@ code {
   position: relative;
   word-break: break-all;
   white-space: pre-wrap;
-  color: $zan-doc-code-color;
+  color: $zvm-doc-code-color;
   padding: 18px 10px 18px 20px;
-  background-color: $zan-doc-code-background-color;
+  background-color: $zvm-doc-code-background-color;
   font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace;
 
   &::after {
@@ -59,7 +59,7 @@ code.language-css {
 }
 
 .hljs-subst {
-  color: $zan-doc-code-color;
+  color: $zvm-doc-code-color;
 }
 
 .hljs-string,
