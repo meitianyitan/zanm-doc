@@ -48,9 +48,16 @@ export default {
 @import './style/index.css';
 
 .zvm-doc {
-  height: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  overflow: auto;
 
   .zvm-doc-layout {
+    position: relative;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex: auto;
