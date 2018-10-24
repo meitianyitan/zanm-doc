@@ -81,7 +81,7 @@ export default {
   padding: 25px 0 75px;
   min-width: $zvm-doc-nav-width;
   max-width: $zvm-doc-nav-width;
-  border-right: 1px solid $zvm-doc-border-color;
+  box-shadow: 1px 0 1px 0 rgba(0, 0, 0, .08);
   width: 240px;
 
   .zvm-doc-nav__item {

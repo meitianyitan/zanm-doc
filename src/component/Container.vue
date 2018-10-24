@@ -23,7 +23,6 @@ export default {
   background-color: #fff;
   padding-left: $zvm-doc-nav-width;
   margin-top: 60px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 
   &--with-simulator {
     padding-right: calc($zvm-doc-simulator-width + $zvm-doc-padding);

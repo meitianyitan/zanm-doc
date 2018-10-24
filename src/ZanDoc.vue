@@ -1,20 +1,22 @@
 <template>
   <div class="zvm-doc">
     <zvm-doc-header :config="config.header" :active="active" />
-    <zvm-doc-nav :nav-config="config.nav" :base="base" />
-    <zvm-doc-container :has-simulator="!!(simulator || simulators.length)">
-      <zvm-doc-content>
-        <slot />
-        <zvm-doc-footer-nav :nav-config="config.nav" :base="base" />
-      </zvm-doc-content>
-    </zvm-doc-container>
-    <zvm-doc-simulator v-if="simulator" :src="simulator" />
-    <zvm-doc-simulator
-      v-for="(url, index) in simulators"
-      v-show="index === currentSimulator"
-      :src="url"
-      :key="url"
-    />
+    <div class="zvm-doc-layout">
+      <zvm-doc-nav :nav-config="config.nav" :base="base" />
+      <zvm-doc-container :has-simulator="!!(simulator || simulators.length)">
+        <zvm-doc-content>
+          <slot />
+          <zvm-doc-footer-nav :nav-config="config.nav" :base="base" />
+        </zvm-doc-content>
+      </zvm-doc-container>
+      <zvm-doc-simulator v-if="simulator" :src="simulator" />
+      <zvm-doc-simulator
+        v-for="(url, index) in simulators"
+        v-show="index === currentSimulator"
+        :src="url"
+        :key="url"
+      />
+    </div>
   </div>
 </template>
 
@@ -47,6 +49,13 @@ export default {
 
 .zvm-doc {
   height: 100%;
+
+  .zvm-doc-layout {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    overflow: auto;
+  }
 }
 </style>
 
