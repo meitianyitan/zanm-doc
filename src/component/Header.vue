@@ -62,9 +62,13 @@ export default {
 @import '../style/variable';
 
 .zan-doc-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
   width: 100%;
   user-select: none;
-  border-bottom: 1px solid $zan-doc-border-color;
+  z-index: 1000;
 
   &__top {
     display: flex;

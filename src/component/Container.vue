@@ -22,6 +22,8 @@ export default {
   box-sizing: border-box;
   background-color: #fff;
   padding-left: $zan-doc-nav-width;
+  margin-top: 80px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 
   &--with-simulator {
     padding-right: calc($zan-doc-simulator-width + $zan-doc-padding);
