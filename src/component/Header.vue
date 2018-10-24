@@ -62,7 +62,7 @@ export default {
 <style lang="postcss">
 @import '../style/variable';
 
-.zan-doc-header {
+.zvm-doc-header {
   position: fixed;
   left: 0;
   top: 0;
