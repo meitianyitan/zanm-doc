@@ -77,14 +77,15 @@ export default {
   z-index: 1;
   position: fixed;
   overflow-y: scroll;
+  overflow-x: hidden;
   padding: 25px 0 75px;
   min-width: $zvm-doc-nav-width;
   max-width: $zvm-doc-nav-width;
   border-right: 1px solid $zvm-doc-border-color;
+  width: 240px;
 
-  @media (max-width: 1300px) {
-    min-width: 220px;
-    max-width: 220px;
+  .zvm-doc-nav__item {
+    width: 220px;
   }
 
   @media (min-width: $zvm-doc-row-max-width) {
@@ -153,9 +154,6 @@ export default {
   }
 
   @media (max-width: 1300px) {
-    min-width: 220px;
-    max-width: 220px;
-
     &__item,
     &__subitem {
       a {

@@ -44,5 +44,9 @@ export default {
 
 <style lang="postcss">
 @import './style/index.css';
+
+.zvm-doc {
+  height: 100%;
+}
 </style>
 
