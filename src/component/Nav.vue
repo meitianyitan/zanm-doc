@@ -1,6 +1,6 @@
 <template>
-  <div class="zvm-doc-nav">
-    <div class="zvm-doc-nav-children">
+  <div class="zvm-doc-nav-container">
+    <div class="zvm-doc-nav">
       <div class="zvm-doc-nav__item" v-for="(item, index) in navConfig" :key="index">
         <zvm-doc-nav-link :item="item" :base="base" />
         <div v-if="item.children">
@@ -56,101 +56,102 @@ export default {
 <style lang="postcss">
 @import '../style/variable';
 
-.zvm-doc-nav {
+.zvm-doc-nav-container {
   flex: 0 0 220px;
   width: 220px;
   box-shadow: 1px 0 1px 0 rgba(0, 0, 0, .08);
   overflow: hidden;
+}
 
-  .zvm-doc-nav-children {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding: 25px 0 75px;
-    min-width: $zvm-doc-nav-width;
-    max-width: $zvm-doc-nav-width;
-    width: 240px;
+.zvm-doc-nav {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 25px 0 75px;
+  min-width: $zvm-doc-nav-width;
+  max-width: $zvm-doc-nav-width;
+  box-shadow: 1px 0 1px 0 rgba(0, 0, 0, .08);
+  width: 240px;
 
-    .zvm-doc-nav__item {
-      width: 220px;
+  .zvm-doc-nav__item {
+    width: 220px;
+  }
+
+  @media (min-width: $zvm-doc-row-max-width) {
+    left: 50%;
+    margin-left: calc(-$zvm-doc-row-max-width/2);
+  }
+
+  &::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 90, 100, .2);
+  }
+
+  &__item,
+  &__subitem {
+    a {
+      margin: 0;
+      display: block;
+      color: #455a64;
+      font-size: 16px;
+      padding: 10px calc($zvm-doc-padding/2) 10px $zvm-doc-padding;
+      line-height: 24px;
+      transition: all .3s;
+
+      &.active {
+        color: $zvm-doc-blue;
+      }
+    }
+  }
+
+  &__item {
+    > a {
+      font-weight: bold;
+    }
+  }
+
+  &__subitem {
+    a {
+      font-size: 14px;
+
+      &:hover {
+        color: $zvm-doc-blue;
+      }
     }
 
-    @media (min-width: $zvm-doc-row-max-width) {
-      left: 50%;
-      margin-left: calc(-$zvm-doc-row-max-width/2);
+    span {
+      opacity: .6;
+      font-size: 13px;
     }
+  }
 
-    &::-webkit-scrollbar {
-      height: 6px;
-      width: 6px;
-      background-color: transparent;
-    }
+  &__group-title {
+    font-size: 12px;
+    line-height: 40px;
+    padding-left: $zvm-doc-padding;
+    color: $zvm-doc-text-light-blue;
+  }
 
-    &::-webkit-scrollbar-thumb {
-      border-radius: 6px;
-      background-color: transparent;
-    }
-
-    &:hover::-webkit-scrollbar-thumb {
-      background-color: rgba(69, 90, 100, .2);
-    }
-
+  @media (max-width: 1300px) {
     &__item,
     &__subitem {
       a {
-        margin: 0;
-        display: block;
-        color: #455a64;
-        font-size: 16px;
-        padding: 10px calc($zvm-doc-padding/2) 10px $zvm-doc-padding;
-        line-height: 24px;
-        transition: all .3s;
-
-        &.active {
-          color: $zvm-doc-blue;
-        }
-      }
-    }
-
-    &__item {
-      > a {
-        font-weight: bold;
+        line-height: 22px;
       }
     }
 
     &__subitem {
       a {
-        font-size: 14px;
-
-        &:hover {
-          color: $zvm-doc-blue;
-        }
-      }
-
-      span {
-        opacity: .6;
         font-size: 13px;
-      }
-    }
-
-    &__group-title {
-      font-size: 12px;
-      line-height: 40px;
-      padding-left: $zvm-doc-padding;
-      color: $zvm-doc-text-light-blue;
-    }
-
-    @media (max-width: 1300px) {
-      &__item,
-      &__subitem {
-        a {
-          line-height: 22px;
-        }
-      }
-
-      &__subitem {
-        a {
-          font-size: 13px;
-        }
       }
     }
   }
