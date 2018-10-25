@@ -20,6 +20,7 @@ export default {
 .zvm-doc-container {
   box-sizing: border-box;
   background-color: #fff;
+  overflow-y: scroll;
 
   &--with-simulator {
     padding-right: calc($zvm-doc-simulator-width + $zvm-doc-padding);

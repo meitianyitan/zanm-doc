@@ -61,7 +61,7 @@ export default {
     display: flex;
     flex-direction: row;
     flex: auto;
-    overflow: auto;
+    overflow: hidden;
   }
 }
 </style>

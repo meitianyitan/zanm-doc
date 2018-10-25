@@ -102,7 +102,7 @@ export default {
   right: $zvm-doc-padding;
   width: $zvm-doc-simulator-width;
   min-width: $zvm-doc-simulator-width;
-  top: calc($zvm-doc-padding + $zvm-doc-header-top-height);
+  top: 35px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 4px, rgba(0, 0, 0, 0.2) 0 1px 2px;
 
   @media (max-width: 1300px) {
