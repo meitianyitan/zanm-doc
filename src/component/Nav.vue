@@ -59,7 +59,8 @@ export default {
 .zvm-doc-nav-container {
   flex: 0 0 220px;
   width: 220px;
-  box-shadow: 1px 0 1px 0 rgba(0, 0, 0, .08);
+  padding: 0 0 75px;
+  border-right: 1px solid #e8e8e8;
   overflow: hidden;
 }
 
