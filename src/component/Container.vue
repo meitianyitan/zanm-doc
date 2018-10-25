@@ -18,10 +18,8 @@ export default {
 @import '../style/variable';
 
 .zvm-doc-container {
-  overflow: hidden;
   box-sizing: border-box;
   background-color: #fff;
-  padding-left: $zvm-doc-nav-width;
   margin-top: 60px;
 
   &--with-simulator {

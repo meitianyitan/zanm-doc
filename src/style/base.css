@@ -1,16 +1,17 @@
 @import './variable';
 
-html,
-body {
+html {
   height: 100%;
 }
 
 body {
+  height: 100%;
   margin: 0;
   color: #333;
   font-size: 16px;
   min-width: 1100px;
   overflow-x: auto;
+  overflow-y: hidden;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   font-family: PingFang SC, "Helvetica Neue", Arial, sans-serif;
