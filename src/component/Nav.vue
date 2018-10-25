@@ -65,6 +65,7 @@ export default {
 }
 
 .zvm-doc-nav {
+  height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 25px 0 75px;
