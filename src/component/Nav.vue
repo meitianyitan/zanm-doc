@@ -1,5 +1,5 @@
 <template>
-  <div class="zvm-doc-nav" :style="style">
+  <div class="zvm-doc-nav">
     <div class="zvm-doc-nav__item" v-for="(item, index) in navConfig" :key="index">
       <zvm-doc-nav-link :item="item" :base="base" />
       <div v-if="item.children">
@@ -37,22 +37,6 @@ export default {
     }
   },
 
-  data() {
-    return {
-      top: 60,
-      bottom: 0
-    };
-  },
-
-  computed: {
-    style() {
-      return {
-        top: this.top + 'px',
-        bottom: this.bottom + 'px'
-      };
-    }
-  },
-
   created() {
     window.addEventListener('scroll', this.onScroll);
     this.onScroll();
@@ -71,11 +55,6 @@ export default {
 @import '../style/variable';
 
 .zvm-doc-nav {
-  left: 0;
-  top: 60px;
-  bottom: 0;
-  z-index: 1;
-  position: fixed;
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 25px 0 75px;
