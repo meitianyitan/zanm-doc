@@ -137,10 +137,11 @@ export default {
   }
 
   &__group-title {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 40px;
     padding-left: $zvm-doc-padding;
-    color: $zvm-doc-text-light-blue;
+    color: rgba(69, 90, 100);
+    font-weight: bold;
   }
 
   @media (max-width: 1300px) {
