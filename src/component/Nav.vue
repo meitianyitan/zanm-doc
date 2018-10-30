@@ -110,6 +110,7 @@ export default {
       transition: all .3s;
 
       &.active {
+        position: relative;
         color: $zvm-doc-blue;
         background: #f0faff;
 
